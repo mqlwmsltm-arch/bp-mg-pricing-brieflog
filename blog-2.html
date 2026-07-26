@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마포 유흥 비교 분석 – 브로가 까주는 업소별 가격 & 서비스 차이</title>
+    <meta name="description" content="마포구 셔츠룸·룸싸롱 가격 비교. 합정 vs 홍대 vs 공덕, 투명 정찰제 도입 업소와 기존 업소 차이, 실제 체감 서비스 품질까지 브로가 직접 비교해드립니다.">
+    <meta name="keywords" content="마포 유흥 비교,셔츠룸 가격 비교,합정 셔츠룸,홍대 룸싸롱,공덕 유흥,투명 정찰제 비교,업소별 차이,브로 추천">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://pricing.brieflog.shop/compare">
+
+    <!-- OG / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="마포 유흥 업소별 비교 – 가격·서비스·분위기 한눈에">
+    <meta property="og:description" content="합정·홍대·공덕·마곡, 지역별 특징과 실장 출신 브로의 냉정한 비교. 정찰제 업소가 진짜 나은지 직접 따져보세요.">
+    <meta property="og:url" content="https://pricing.brieflog.shop/compare">
+    <meta property="og:image" content="https://pricing.brieflog.shop/img/og-compare.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="마포 유흥 업소별 비교 – 가격·서비스·분위기 한눈에">
+    <meta name="twitter:description" content="합정·홍대·공덕·마곡, 지역별 특징과 실장 출신 브로의 냉정한 비교.">
+
+    <!-- CSS -->
+    <style>
+        /* ---- RESET & BASE ---- */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #f8f6f2; color: #1a1a1a; line-height: 1.6; }
+        a { color: #2b5e4e; text-decoration: none; transition: color 0.2s ease; }
+        a:hover { color: #1a3d32; }
+        img, svg { max-width: 100%; height: auto; display: block; }
+
+        /* ---- TYPOGRAPHY (Swiss minimal) ---- */
+        h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+        h1 { font-size: 2.4rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.8rem; margin: 2rem 0 1rem; border-bottom: 2px solid #d4c9b8; padding-bottom: 0.5rem; }
+        h3 { font-size: 1.3rem; margin: 1.5rem 0 0.75rem; }
+        h4 { font-size: 1.1rem; margin: 1rem 0 0.5rem; }
+        p, li { font-size: 1rem; margin-bottom: 0.75rem; }
+        .small { font-size: 0.875rem; color: #6b6359; }
+
+        /* ---- CONTAINER ---- */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* ---- HEADER ---- */
+        header { background: #ffffff; border-bottom: 1px solid #e0d8cc; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.03em; color: #1a1a1a; }
+        .logo span { color: #2b5e4e; }
+
+        /* ---- NAV ---- */
+        nav { display: flex; gap: 1.5rem; align-items: center; }
+        nav a { font-weight: 600; font-size: 0.95rem; color: #3a3a3a; text-transform: uppercase; letter-spacing: 0.05em; }
+        nav a:hover { color: #2b5e4e; }
+        .hamburger-menu { display: none; flex-direction: column; cursor: pointer; gap: 4px; background: none; border: none; padding: 4px; }
+        .hamburger-menu span { width: 24px; height: 2px; background: #1a1a1a; border-radius: 2px; transition: 0.3s; }
+
+        /* ---- HERO ---- */
+        .hero { padding: 4rem 0 2rem; text-align: center; }
+        .hero h1 { font-size: 2.8rem; }
+        .hero p { font-size: 1.1rem; color: #5a5248; max-width: 650px; margin: 1rem auto; }
+
+        /* ---- COMPARE TABLE ---- */
+        .compare-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        .compare-table th { background: #2b5e4e; color: #fff; padding: 1rem; text-align: left; font-weight: 600; }
+        .compare-table td { padding: 1rem; border-bottom: 1px solid #eee; vertical-align: top; }
+        .compare-table tr:last-child td { border-bottom: none; }
+        .compare-table .highlight { background: #f4f0e8; }
+
+        /* ---- CARD GRID ---- */
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .card { background: #fff; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.04); border: 1px solid #e8e0d4; }
+        .card h3 { margin-top: 0; }
+        .card .tag { display: inline-block; background: #2b5e4e; color: #fff; font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 4px; margin-bottom: 0.5rem; }
+
+        /* ---- FAQ ---- */
+        .faq-item { margin-bottom: 1.5rem; }
+        .faq-item h4 { margin-bottom: 0.3rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item h4::after { content: '+'; font-size: 1.4rem; color: #2b5e4e; }
+        .faq-item.active h4::after { content: '−'; }
+        .faq-item p { margin-top: 0.5rem; display: none; }
+        .faq-item.active p { display: block; }
+
+        /* ---- FOOTER ---- */
+        footer { background: #1a1a1a; color: #aaa; padding: 2rem 0; margin-top: 4rem; text-align: center; }
+        footer a { color: #d4c9b8; }
+        footer a:hover { color: #fff; }
+
+        /* ---- RESPONSIVE 768 ---- */
+        @media (max-width: 768px) {
+            .hamburger-menu { display: flex; }
+            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; padding: 1rem 1.5rem; border-bottom: 1px solid #e0d8cc; gap: 0.75rem; }
+            nav.open { display: flex; }
+            h1 { font-size: 1.8rem; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .compare-table { font-size: 0.9rem; }
+            .compare-table th, .compare-table td { padding: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo"><span>브로</span>의 비교</div>
+            <button class="hamburger-menu" onclick="this.classList.toggle('active'); document.querySelector('nav').classList.toggle('open');">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <a href="/">홈</a>
+                <a href="/price">가격</a>
+                <a href="/compare">비교</a>
+                <a href="/review">후기</a>
+                <a href="/faq">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+
+<!-- SEO Visual 1: 마포 유흥 투명 정찰제 가격 정보 디렉토리 Editorial Apple Hero -->
+<div class="seo-visual-hero" role="img" aria-label="신뢰할 수 있는 서비스 —  마포 유흥 투명 정찰제 가격 정보 디렉토리" 
+     style="width:100%;padding:64px 24px;background:#faf9f6;border-bottom:1px solid #e5e5e0;text-align:left;margin:32px 0">
+  <div style="max-width:800px;margin:0 auto">
+    <div style="font-family:serif;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.3em;color:#8a7355;margin-bottom:16px">— EDITORIAL PROFILES</div>
+    <div style="font-size:3.5em;line-height:1.1;font-weight:400;font-family:serif;color:#1c1c1e;letter-spacing:-0.03em;margin-bottom:16px">마포 유흥 투명 정찰제 가격 정보 디렉토리</div>
+    <p style="font-size:1.05rem;line-height:1.6;color:#1c1c1e;opacity:0.85;max-width:600px">신뢰할 수 있는 서비스에 관한 독립적이고 깊이 있는 정보를 제공합니다.</p>
+  </div>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"마포 유흥 투명 정찰제 가격 정보 디렉토리","description":"신뢰할 수 있는 서비스","contentUrl":"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22/>"}</script>
+</div>
+        <div class="container">
+            <h1>마포 유흥, 진짜 달라?<br>업소별 비교 분석</h1>
+            <p>합정·홍대·공덕·마곡, 지역별 특성부터 투명 정찰제와 기존 방식의 차이까지. 실장 출신 브로가 직접 경험하고 비교한 내용을 솔직하게 공유합니다.</p>
+        </div>
+    
+<div class="seo-visual-divider" role="separator" aria-label="마포 유흥 투명 정찰제 가격 정보 디렉토리 구분선" style="margin:32px 0;text-align:center;color:#e5e5e0;font-size:0.85rem;letter-spacing:0.5em">◆ ◆ ◆</div>
+</section>
+
+<!-- SEO Visual 2: 가격 투명성 감시 Cardless Editorial List -->
+<div class="seo-visual-cards" role="img" aria-label="마포 유흥 투명 정찰제 가격 정보 디렉토리 가격 투명성 감시 — 신뢰할 수 있는 서비스" 
+     style="display:flex;flex-direction:column;gap:0;margin:40px 0;border-top:1px solid #e5e5e0;border-bottom:1px solid #e5e5e0;background:#faf9f6">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 01 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">SEO 대책</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">마포 유흥 투명 정찰제 가격 정보 디렉토리</span>
+  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 02 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">집객 지원</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">마포 유흥 투명 정찰제 가격 정보 디렉토리</span>
+  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:none;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 03 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">분석</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">마포 유흥 투명 정찰제 가격 정보 디렉토리</span>
+  </div>
+</div>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <!-- 비교 테이블 -->
+        <h2>📍 지역별 핵심 비교</h2>
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>항목</th>
+                    <th>합정</th>
+                    <th>홍대</th>
+                    <th>공덕</th>
+                    <th>마곡</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>주요 업종</td>
+                    <td>셔츠룸, 가라오케</td>
+                    <td>룸싸롱, 클럽형</td>
+                    <td>셔츠룸, 풀살롱</td>
+                    <td>신축 셔츠룸, vip룸</td>
+                </tr>
+                <tr>
+                    <td>기본 비용 (2시간)</td>
+                    <td>20~25만 원</td>
+                    <td>25~35만 원</td>
+                    <td>18~22만 원</td>
+                    <td>22~28만 원</td>
+                </tr>
+                <tr class="highlight">
+                    <td>투명 정찰제 도입</td>
+                    <td>✅ 70% 도입</td>
+                    <td>⚠️ 40% 도입</td>
+                    <td>✅ 80% 도입</td>
+                    <td>✅ 60% 도입</td>
+                </tr>
+                <tr>
+                    <td>아가씨 퀄리티</td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td>화장실 청결도</td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td>브로 추천도</td>
+                    <td>👍👍👍👍</td>
+                    <td>👍👍👍</td>
+                    <td>👍👍👍👍👍</td>
+                    <td>👍👍👍👍</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 카드 섹션: 특징 비교 -->
+        <h2>🔍 투명 정찰제 vs 기존 방식</h2>
+        <div class="card-grid">
+            <div class="card">
+                <span class="tag">정찰제</span>
+                <h3>합정 A셔츠룸</h3>
+                <p>2시간 22만 원 고정. 추가 비용 없음. 아가씨 리필도 포함이라 부담 제로. 다만 초이스 폭이 좁은 편.</p>
+                <p class="small">실장 출신 코ᄆ멘트: "정찰제는 처음엔 비싸 보여도 나중에 깜놀할 일 없어서 좋아. 근데 아가씨들이 좀 패시브할 때가 있어."</p>
+            </div>
+            <div class="card">
+                <span class="tag">기존 방식</span>
+                <h3>홍대 B룸싸롱</h3>
+                <p>기본 25만 원 + 추가 티켓 5~10만 원 + 팁. 결과적으로 40만 원까지도. 대신 아가씨들이 적극적이고 분위기는 확실히 좋음.</p>
+                <p class="small">내 경험: "처음엔 25만 원 괜찮네 했는데, 나가보니 43만 원. 기분은 좋았지만 지갑이 울었어."</p>
+            </div>
+            <div class="card">
+                <span class="tag">정찰제</span>
+                <h3>공덕 C셔츠룸</h3>
+                <p>2시간 20만 원, 1시간 추가 8만 원. 화장실 청결도 마포 탑급. 단점은 위치가 좀 애매해서 대리 부르기 좋음.</p>
+                <p class="small">브로 팁: "여기는 진짜 깔끔해. 데이트 개념으로 가기도 좋아. 근데 초이스할 때 시간 걸리니까 미리 와."</p>
+            </div>
+            <div class="card">
+                <span class="tag">기존 방식</span>
+                <h3>마곡 D룸</h3>
+                <p>기본 28만 원, vip
+</body>
+</html>

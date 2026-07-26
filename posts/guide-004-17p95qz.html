@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마포 룸살롱 정찰제 실패 기록 - 뱀 같은 가격표 잡는 실전 필드 노트</title>
+  <link rel="canonical" href="https://pricing.brieflog.shop/posts/guide-004-17p95qz.html">
+  <style>
+    body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+    h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
+    h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
+    h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
+    p { margin: 0 0 1em; }
+    a { color: #3182ce; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html">← 목록으로 돌아가기</a>
+  </header>
+  <main>
+    <h1>마포 룸살롱 정찰제 실패 기록 - 뱀 같은 가격표 잡는 실전 필드 노트</h1>
+    <article>
+      <p>2010년 10월, FromSoftware 사내 서버에선 `E3_2010_Build`라는 버전명의 실행 파일이 반쯤 죽어 있었다. 필자는 그 빌드의 메모리 어딘가에 갇힌 `Unused_Area_Cemetery_of_Ash_V0.2` 레벨 데이터를 해체하고 있었다. 표면적으로는 초기 지역 '묘지의 재'의 프로토타입이라 불렸지만, 실제 구조는 그게 아니었다. 그건 무덤이 아니라, 광부들의 마을이었다. 철거된 광산 갱도를 배경으로, 벽면에는 `DLC_Weapon_Model_Gravekeeper`라는 이름의 무기 모델 텍스처가 벗겨져 있었다.</p>
+<p>데이터 마이닝은 감정이 섞인 작업이다. `cemetery_v02_enemy_layout.json` 파일을 열면, 적 배치의 고민이 고스란히 남아 있다. 초반부에 `Undead_Miner_x12`와 `Trap_Dart_x4`가 빼곡하게 채워져 있다가, 어떤 시점에 `miner_x12`가 `null`로 지워지고 `Hollow_Knight_x3`로 덮어씌워진 흔적이 있다. 개발 일지엔 없지만, 이 `null` 처리 시점은 정확히 2011년 2월 빌드 `CQC_Balance_Pass`와 일치한다. 이유는 추정할 수밖에 없다. 아마도 초반 난이도 밀도 조절. 혹은 그 광부 적들이 유지보수하기엔 너무 까다로웠을 것이다.</p>
+<p>가장 가슴 아픈 건 `gravekeeper_sword.fbx` 모델 파일이다. 해상도가 말도 안 되게 높다. 텍스처 패킹도 `PBR_Roughness_Metallic` 방식으로, 출시된 '시계추의 대검'보다 두 세대 앞선 퀄리티다. 파일 속성엔 `Prototype_No.7_Leadbetter`라는 개발자 서명이 박혀 있다. 그건 단순한 무기가 아니었다. 그건 그 버전의 게임이 '광산 노동자의 잔혹한 일상'을 서사로 삼으려 했다는 증거다. 광부들이 채굴용 곡괭이 대신 이 보석 박힌 검을 들고 있었으면, 그들의 비극은 좀 더 처참하고 미학적으로 빛났을 것이다. 하지만 출시된 세계관은 '잠들지 않는 유령'을 중심으로 재편되었다. 리더가 `gravekeeper`를 `knight`로 교체한 그 순간, 수백 시간의 애니메이션 작업이 휴지통으로 직행했을 것이다.</p>
+<p>데이터는 기억한다. `enemy_placement_diff.patch` 파일엔 두 가지 판단 기준이 암묵적으로 작동했다. 첫째, `teaching_moment_score`. 적이 플레이어에게 '이것은 이렇게 피해야 한다'는 룰을 명확히 가르칠 수 있는지. 둘째, `asset_roi`. 하나의 적을 만들기에投入된 리소스 대비, 그 적이 게임 전체에서 차지하는 존재감의 비율. 광부 적들은 둘 다에서 점수가 낮았을 것이다. 그들은 너무 특수했고, 그래서 너무 소모적이었다.</p>
+<p>그리고 여기, 현자의 한 마디가 있다. "이미 만들어진 것을 지우는 건, 만드는 것보다 더 잔인한 개발 단계다." 필자가 수 년간 마포 일대의 고급 룸살롱들의 비즈니스 모델과 가격 구조를 분석하며 느낀 것과 정확히 일치한다. 어떤 샵은 '코스 가격'이라는 고정 틀 안에서 서비스의 깊이를 포기했다. 반면 어떤 샵은 불명확한 '기본 셋트' 뒤에 모든 변수를 숨긴다. 투명하지 않은 가격 구조는 결국 '고객의 학습 비용'으로 전가된다.</p>
+<p>데이터 마이닝의 교훈은 단순하다. 보이지 않는 곳에 남은 흔적(`unused_asset`, `null_enemy`)이 실제 제품의 의도와 한계를 가장 정직하게 말해준다. 2011년 `gravekeeper_sword.fmx`를 지운 그 결정은, 아마도 '가장 편한 길'과 '가장 아름다운 길' 사이의 고민이었을 것이다. 마포에서 합리적인 가격과 진정한 휴식을 동시에 손에 넣으려면, 당신도 그 파일 목록 속 `null` 값과 덮어씌워진 데이터의 흔적을 읽을 줄 알아야 한다. 정찰제라 쓰고 감춰진 변동폭이라 읽는 것.</p>
+<p><a href="https://shirtsking.dothome.co.kr/" target="_blank" rel="noopener noreferrer">마포 비즈니스 룸싸롱 코스 예약</a></p>
+    </article>
+  </main>
+</body>
+</html>
