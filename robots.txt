@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://pricing.brieflog.shop/sitemap.xml
+Sitemap: https://pricing.brieflog.shop/sitemap-pages.xml
