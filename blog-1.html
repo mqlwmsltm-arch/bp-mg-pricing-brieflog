@@ -1,26 +1,268 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="charcoal-silver" data-build="a1b2c3d4e5f6g7h8">
+<html lang="ko">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>마포 유흥 투명 정찰제 가격 정보 디렉토리 | 가이드</title>
- <meta name="description" content="마포 지역 유흥 시장의 불투명한 비용 구조를 파헤칩니다. 가격 결정의 핵심 요인과 인원, 시간대별 변동성을 분석하여 합리적인 선택을 돕는 심층 리포트입니다.">
- <meta name="keywords" content="마포 유흥, 투명 정찰제, 가격 구조, 유흥 비용 분석, 마포 유흥 디렉토리">
- <meta name="generator" content="custom-cms-x9a2">
- <link rel="canonical" href="https://pricing.brieflog.shop/blog-1.html">
- <meta property="og:url" content="https://pricing.brieflog.shop/blog-1.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마포 유흥 투명 정찰제 가격 정보 디렉토리 | 가이드</title>
+  <meta name="description" content="마포 지역 유흥 시장의 불투명한 비용 구조를 파헤칩니다. 가격 결정의 핵심 요인과 인원, 시간대별 변동성을 분석하여 합리적인 선택을 돕는 심층 리포트입니다.">
+  <link rel="canonical" href="https://pricing.brieflog.shop/blog-1.html">
+  <meta property="og:url" content="https://pricing.brieflog.shop/blog-1.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* ---- RESET & BASE ---- */
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body {
+ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+ background-color: #fafafa;
+ color: #111;
+ line-height: 1.6;
+ font-weight: 400;
+ -webkit-font-smoothing: antialiased;
+ }
+ a { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+ a:hover { border-bottom-color: #2563eb; }
+ img, svg { display: block; max-width: 100%; }
+
+ /* ---- TYPOGRAPHY (Swiss minimal) ---- */
+ h1, h2, h3, h4 {
+ font-weight: 300;
+ letter-spacing: -0.02em;
+ line-height: 1.2;
+ }
+ h1 { font-size: clamp(2.6rem, 8vw, 4.8rem); font-weight: 200; }
+ h2 { font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 300; margin-bottom: 1.2rem; }
+ h3 { font-size: 1.5rem; font-weight: 400; margin-bottom: 0.5rem; }
+ p, li { font-size: 1rem; font-weight: 350; color: #222; max-width: 70ch; }
+ .small { font-size: 0.85rem; color: #555; }
+
+ /* ---- CONTAINER ---- */
+ .container {
+ max-width: 960px;
+ margin: 0 auto;
+ padding: 0 24px;
+ }
+
+ /* ---- HEADER / NAV (sticky) ---- */
+ header {
+ position: sticky;
+ top: 0;
+ z-index: 50;
+ background: #fafafa;
+ border-bottom: 1px solid #ddd;
+ padding: 16px 0;
+ }
+ .nav-inner {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ max-width: 960px;
+ margin: 0 auto;
+ padding: 0 24px;
+ }
+ .logo {
+ font-weight: 300;
+ font-size: 1.4rem;
+ letter-spacing: -0.02em;
+ border-bottom: none;
+ }
+ .logo span { font-weight: 200; color: #2563eb; }
+ .nav-links {
+ display: flex;
+ gap: 32px;
+ list-style: none;
+ }
+ .nav-links a {
+ font-weight: 400;
+ font-size: 0.95rem;
+ border-bottom: 1px solid transparent;
+ padding-bottom: 4px;
+ }
+ .nav-links a:hover { border-bottom-color: #2563eb; }
+
+ /* 햄버거 */
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+ .hamburger span { width: 26px; height: 2px; background: #111; display: block; transition: 0.3s; }
+ #menu-toggle { display: none; }
+ #menu-toggle:checked + .hamburger + .nav-links { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: #fafafa; padding: 24px; border-bottom: 1px solid #ddd; gap: 20px; }
+ @media (max-width: 768px) {
+ .hamburger { display: flex; }
+ .nav-links { display: none; }
+ .nav-links a { font-size: 1.2rem; }
+ }
+
+ /* ---- HERO (zen-minimal) ---- */
+ .hero {
+ padding: 100px 0 80px;
+ border-bottom: 1px solid #ddd;
+ margin-bottom: 40px;
+ }
+ .hero .container {
+ display: flex;
+ flex-direction: column;
+ gap: 28px;
+ }
+ .hero h1 { max-width: 14ch; }
+ .hero p { font-size: 1.15rem; max-width: 60ch; color: #333; font-weight: 350; }
+ .hero-meta {
+ display: flex; gap: 32px; flex-wrap: wrap;
+ border-top: 1px solid #ddd; padding-top: 24px; margin-top: 16px;
+ }
+ .hero-meta span { font-weight: 300; color: #444; font-size: 0.9rem; }
+
+ /* ---- SECTION DIVIDER ---- */
+ section { padding: 40px 0; }
+ .section-title { border-bottom: 1px solid #111; padding-bottom: 8px; margin-bottom: 32px; display: inline-block; }
+
+ /* ---- TIMELINE (시간대별) ---- */
+ .timeline-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 24px;
+ }
+ .timeline-card {
+ border: 1px solid #ddd;
+ padding: 24px;
+ background: #fff;
+ transition: border-color 0.2s;
+ }
+ .timeline-card:hover { border-color: #2563eb; }
+ .timeline-card h3 { font-weight: 400; font-size: 1.3rem; margin-bottom: 8px; }
+ .timeline-card .time-badge {
+ display: inline-block;
+ font-weight: 300;
+ font-size: 0.8rem;
+ letter-spacing: 0.3px;
+ border: 1px solid #111;
+ padding: 2px 12px;
+ margin-bottom: 12px;
+ }
+ .timeline-card p { font-size: 0.95rem; }
+
+ /* ---- UGC 리뷰 카드 ---- */
+ .review-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+ gap: 24px;
+ }
+ .review-card {
+ border: 1px solid #e0e0e0;
+ padding: 24px;
+ background: #fff;
+ transition: 0.2s;
+ }
+ .review-card:hover { border-color: #2563eb; }
+ .review-card .stars { color: #111; font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 8px; }
+ .review-card blockquote { font-style: normal; font-weight: 350; margin-bottom: 16px; }
+ .review-card .author { font-weight: 400; font-size: 0.9rem; }
+ .review-card .date { font-weight: 300; color: #777; font-size: 0.8rem; }
+
+ /* ---- 인사이더 노트 (voice) ---- */
+ .insider-note {
+ background: #fff;
+ border: 1px solid #111;
+ padding: 32px;
+ margin: 32px 0;
+ position: relative;
+ }
+ .insider-note::before {
+ content: "실장 출신 인사이더";
+ position: absolute;
+ top: -12px;
+ left: 24px;
+ background: #fafafa;
+ padding: 0 12px;
+ font-weight: 400;
+ font-size: 0.75rem;
+ letter-spacing: 0.5px;
+ color: #2563eb;
+ }
+ .insider-note p { font-size: 1rem; }
+
+ /* ---- 편의시설 (약국/ATM 등) ---- */
+ .facility-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+ gap: 16px;
+ margin: 24px 0;
+ }
+ .facility-item {
+ border: 1px solid #ddd;
+ padding: 16px;
+ text-align: center;
+ background: #fff;
+ }
+ .facility-item .emoji { font-size: 2rem; margin-bottom: 8px; }
+ .facility-item span { font-weight: 300; }
+
+ /* ---- 지도 평점 비뾰 ---- */
+ .rating-compare {
+ display: flex;
+ gap: 40px;
+ flex-wrap: wrap;
+ border-top: 1px solid #ddd;
+ border-bottom: 1px solid #ddd;
+ padding: 24px 0;
+ margin: 32px 0;
+ }
+ .rating-box { flex: 1; min-width: 140px; }
+ .rating-box .label { font-weight: 400; font-size: 0.9rem; }
+ .rating-box .value { font-size: 1.8rem; font-weight: 200; }
+ .rating-box .sub { font-weight: 300; color: #555; }
+
+ /* ---- 푸터 ---- */
+ footer {
+ border-top: 1px solid #ddd;
+ padding: 40px 0;
+ margin-top: 40px;
+ text-align: center;
+ font-weight: 300;
+ font-size: 0.85rem;
+ color: #444;
+ }
+ footer a { border-bottom: 1px solid #bbb; }
+ footer a:hover { border-bottom-color: #2563eb; }
+
+ /* ---- 반응형 ---- */
+ @media (max-width: 768px) {
+ .timeline-grid { grid-template-columns: 1fr; }
+ .hero { padding: 60px 0 40px; }
+ .hero h1 { max-width: 100%; }
+ .rating-compare { flex-direction: column; gap: 16px; }
+ }
+ @media (max-width: 480px) {
+ .container { padding: 0 16px; }
+ .review-grid { grid-template-columns: 1fr; }
+ }
+ </style>
   <meta property="og:title" content="마포 유흥 투명 정찰제 가격 정보 디렉토리 | 가이드">
   <meta property="og:description" content="마포 지역 유흥 시장의 불투명한 비용 구조를 파헤칩니다. 가격 결정의 핵심 요인과 인원, 시간대별 변동성을 분석하여 합리적인 선택을 돕는 심층 리포트입니다.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
-<body class="r-body-kjik">
-
- <nav class="nav-present">
+<body>
+  <div class="container">
+    <header>
+ <div class="nav-inner">
+ <a href="/" class="logo"><span>●</span> 브로의 디렉토리</a>
+ <input type="checkbox" id="menu-toggle" hidden>
+ <label for="menu-toggle" class="hamburger" aria-label="메뉴 열기">
+ 
+ </label>
+ <ul class="nav-links">
+ <li><a href="#">홈</a></li>
+ <li><a href="#">시간대별</a></li>
+ <li><a href="#">후기</a></li>
+ <li><a href="#">이벤트</a></li>
+ </ul>
+ </div>
+</header>
+    <main>
+<nav class="nav-present">
  <a href="/">홈</a>
  <a href="/guide">가이드</a>
  <a href="/analysis">분석 리포트</a>
- </nav>
+ <a href="posts.html">글 목록</a></nav>
 
  <main class="t-grid-btkn">
  <header class="k-hero-col4">
@@ -56,6 +298,7 @@
  <footer class="t-foot-w9p0">
  <p>&copy; 2024 마포 유흥 가격 투명성 감시단. 모든 분석 자료는 소비자 보호를 위해 작성되었습니다.</p>
  </footer>
-
+    </main>
+  </div>
 </body>
 </html>

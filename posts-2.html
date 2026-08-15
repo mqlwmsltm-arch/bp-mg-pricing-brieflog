@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/3) · gangnam-doorway2</title>
+  <meta name="description" content="gangnam-doorway2에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://pricing.brieflog.shop/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+        /* ---- RESET & BASE ---- */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+        a {
+            color: #1a1a2e;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: #e63946;
+        }
+        img, svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* ---- TYPOGRAPHY (Swiss minimal) ---- */
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #1a1a2e;
+            padding-bottom: 0.25rem;
+            display: inline-block;
+        }
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        p, li {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        .small {
+            font-size: 0.875rem;
+            color: #6c757d;
+        }
+        /* ---- CONTAINER ---- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        /* ---- HEADER / NAV ---- */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .logo a:hover {
+            color: #e63946;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links li a {
+            font-weight: 500;
+            padding: 0.25rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            border-bottom-color: #e63946;
+        }
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+        .hamburger-menu span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: #1a1a2e;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        /* ---- MAIN CONTENT ---- */
+        main {
+            padding: 3rem 0;
+        }
+        .page-header {
+            margin-bottom: 2.5rem;
+        }
+        .page-header p {
+            font-size: 1.125rem;
+            color: #495057;
+            max-width: 700px;
+        }
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        .intro-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #e9ecef;
+        }
+        .intro-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .intro-card h3::before {
+            content: "★";
+            color: #e63946;
+            font-size: 1.25rem;
+        }
+        .intro-card p {
+            color: #343a40;
+        }
+        .story-block {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .story-block h2 {
+            border-bottom-color: #e63946;
+            margin-bottom: 1.5rem;
+        }
+        .story-block p {
+            max-width: 800px;
+        }
+        .highlight-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .highlight-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .highlight-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #e63946;
+            font-weight: 700;
+        }
+        .cta-box {
+            background-color: #1a1a2e;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 2rem 2.5rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .cta-box p {
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+        .cta-box a {
+            display: inline-block;
+            background-color: #e63946;
+            color: #ffffff;
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .cta-box a:hover {
+            background-color: #c1121f;
+        }
+        /* ---- FOOTER ---- */
+        footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e9ecef;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        footer p {
+            margin-bottom: 0.25rem;
+            color: #6c757d;
+        }
+        /* ---- RESPONSIVE 768 ---- */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #ffffff;
+                border-bottom: 1px solid #e9ecef;
+                padding: 1rem 1.5rem;
+                gap: 1rem;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+            }
+            .nav-links.open {
+                display: flex;
+            }
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .cta-box {
+                padding: 1.5rem;
+            }
+        }
+        @media (min-width: 769px) {
+            .nav-links {
+                display: flex !important;
+            }
+        }
+    </style>
+  <meta property="og:title" content="글 목록 (2/3) · gangnam-doorway2">
+  <meta property="og:description" content="gangnam-doorway2에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://pricing.brieflog.shop/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <a href="/">브로의 디렉토리</a>
+            </div>
+            <button class="hamburger-menu" aria-label="메뉴 열기" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">홈</a></li>
+                <li><a href="/intro" class="active">소개</a></li>
+                <li><a href="/price">가격표</a></li>
+                <li><a href="/review">리뷰</a></li>
+                <li><a href="/contact">문의</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 59개 · 2/3 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-003-zt3kh7.html">마포 유흥 투명 정찰제 가격 정보 디렉토리</a>
+        <p class="post-item__summary">마포 지역에서 유흥 업소의 가격 정보를 투명하게 제공하기 위한 디렉토리 개념을 설명합니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-11vy8pj.html">슬라이드 7번에 적힌 진짜 문제는 대부분 못 읽는다</a>
+        <p class="post-item__summary">그 PDF 묶음 공개되고 한참 뒤였다. 슬라이드 6번까진 뉴스에서 밥 먹듯 인용했는데 7번째 장은 어디서도 못 봤다. 구글 검색창에 prism slide 7 pdf 치면 결과가 나오긴 하는데 대부분</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-17p95qz.html">마포 룸살롱 정찰제 실패 기록</a>
+        <p class="post-item__summary">2010년 10월, FromSoftware 사내 서버에선 E3_2010_Build라는 버전명의 실행 파일이 반쯤 죽어 있었다. 필자는 그 빌드의 메모리 어딘가에 갇힌 Unused_Area_Cemet</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-005-1y8c66z.html">마포 정찰제 셔츠룸 가격 디렉토리 정리</a>
+        <p class="post-item__summary">2023년 젤 카야노 14 OG 아이보리 리스탁, 인솔 로고 프린트가 달라졌다는 사실 아는 사람 얼마나 됨?</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-005-i7z6p7.html">마포 룸 비즈니스 평당 마진의 민낯: 단골이 계산기 두드려본 폭리 실태</a>
+        <p class="post-item__summary">마포역 인근 지하 룸식 업소의 4번 방 환풍기 소음은 정확히 58데시벨이었다. 소음이 클수록 업주는 기본 설비 투자를 아끼고 술값으로 마진을 메우려 안달이 나기 마련이다. 평론가 입장에서 이런 디테</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-followup-8-008-zt3kh7.html">실패한 데이터와 마포 셔츠의 숨은 가격표</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-1aojila.html">마포 유흥 투명 정찰제 가격 정보 디렉토리 vs 마포 유흥 투명 정찰제 가격 정보 디렉토리 비교</a>
+        <p class="post-item__summary">제시된 주제와 맥락 사이에 본질적인 괴리가 있어 정직하게 말씀드리겠습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-azdofj.html">1972년, 그들이 감추려 했던 세 개의 코드명을 지금 꺼내본다</a>
+        <p class="post-item__summary">1972년 5월 11일, 워싱턴 D.C.의 러셀 상원 사무동 1202호실. 에드워드 케네디 상원의원이 의장석에 앉아 있었고, 리처드 헬름스 CIA 국장은 증인석에서 땀을 닦고 있었다. 나는 랭글리에</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-1v2elm2.html">7장짜리 슬라이드, 언론이 건너뛴 페이지의 진짜 용도</a>
+        <p class="post-item__summary">2013년 6월, 기밀해제된 문서 41페이지 중 실제 언론 보도에 등장한 건 23장뿐이었다. 나머지 18장은 '일부 삭제' 혹은 '분석 불필요'라는 꼬리표가 붙었다. 그중 슬라이드 7번은 특히의미가</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-pe18ta.html">월세 800에 매출 3천 찍고도 반년 만에 자빠진 마포 룸 비즈니스의 진짜 원가 계산법</a>
+        <p class="post-item__summary">매달 통장에 3천만 원씩 꽂히는데 왜 내 수중에는 직원들 기프티콘 살 돈도 안 남았을까?</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-003-1wu1hin.html">1판 에라타 모르고 비너스 질렀다가 3시간 만에 테이블 엎을 뻔한 썰</a>
+        <p class="post-item__summary">글룸헤이븐 1판을 굴리는 카페 사장으로서 이딴 질문을 받은 적 있다. &quot;비너스 확장 넣으면 테라포밍 마스 재밌어지나요?&quot; 손님 둘이 2인 전략 게임 찾으면서 저걸 꺼내는데, 내 표정이 굳었다. 저 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-003-sn28c2.html">마포 정찰제 유흥 비교</a>
+        <p class="post-item__summary">2024년 3월 기준, 마포·합정 일대 셔츠룸 정찰제 샵은 대략 12곳 정도생존하고 있다. 그 중 &quot;진짜 투명&quot;이라는 라벨을 달고 영업하는 곳은 절반도 안 된다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-003.html">내부자 눈으로 본 마포 셔츠룸과 니키 박스의 종이 질 차이, 진짜 값싼 건 뭘까?</a>
+        <p class="post-item__summary">Nike SB Dunk Low(1.3), Paris 2003 Retro, Box Material Texture, Stitch Density Comparison, Minimalist Shoe Pack</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-1sbvm34.html">투명함의 배신</a>
+        <p class="post-item__summary">타일러 더든이 공식적으로 등장하기 전, 영화 에 몇 번이나 얼굴을 비친다는 건지 아는 사람이 있을까.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-1w641gx.html">다리 박음질 한 올만 달라도 나는 300만원 날린다</a>
+        <p class="post-item__summary">매물 실물 앞에서 magnifying glass 들이댄 순간, 등줄기가 식었다. 셀러는 &quot;2003 발매 그대로&quot;라고 호기 있게 말했지만, 손에 쥔 상자 무게부터 감이이상하다. 을지로 골목 뒤편 작업</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-gzz95w.html">데모 빌드 잔존 데이터로 본 프롬의 삭제 컨텐츠, 점수는 3.5/5</a>
+        <p class="post-item__summary">빌드 버전 0.89, 2011년 2월자 디버그 메뉴에서 확인된 미사용 맵 데이터는 총 9개 구역이다. 이걸 처음 접한 건 한 인디 팀이었는데, 스팀에서 자기들 게임 출시 3일 만에 판매 중단 크리를</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-005-176ccht.html">인솔 로고 2mm에 40만원이 걸렸다</a>
+        <p class="post-item__summary">아이보리 베이스에 인솔 로고가 2mm 옆으로 밀렸을 뿐인데, 리셀 시장가격은 40만원이 빠졌다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-005-zt3kh7.html">월매출 3000 찍고 사라진 셔츠룸의 원가 구조</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-1rtya4a.html">유니콘 꿈은 편집실 테이프 조각에서 나왔다: 리들리 스콧이 2007년에 숨긴 3개 시퀀스</a>
+        <p class="post-item__summary">프레임 1,274. 거기서부터 문제였다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-n54xd3.html">마포 유흥 투명 정찰제 가격 정보 디렉토리에 대한 통념과 실제 차이를 검토했다</a>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+      <a class="pager__link" href="posts-3.html">3</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
